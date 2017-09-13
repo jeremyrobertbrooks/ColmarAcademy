@@ -25,6 +25,7 @@
 
   h4 {
     font-size: 1.25rem;
+    font-weight: bold;
   }
 
   h5 {
@@ -39,35 +40,66 @@
 
   p, a {
     font-family: "Open Sans", sans-serif;
-    font-size: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.2rem;
     color: #4D4D4D;
   }
 
   /**structure**/
-  #container {
-    max-width: 1366px;
-    margin: auto;
-  }
+    /**media**/
+    img {
+      max-width: 100%;
+    }
 
-  .primary {
-    width: 60%;
-    margin: 2rem 0 0 1.5rem;
-  }
+    video {
+      max-width: 100%;
+    }
 
-  .image {
-    margin: 0 1.5rem 2rem 0;
-  }
+    /**container**/
+    #container {
+      max-width: 1366px;
+      margin: auto;
+    }
 
-  .primary .image img {
-    max-width: 100%;
-  }
+    /**primary**/
+    .primary {
+      width: 60%;
+      padding: 2rem 1.5rem;
+    }
 
-  .secondary {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+    /**secondary**/
+    .secondary {
+      width: 40%;
+      padding: 2rem 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .articleCaption {
+      display: flex;
+      padding: 1rem;
+    }
+
+    .articleCaption:nth-child(2n+1) {
+      background-color: #D6D6D6;
+    }
+
+    .secondaryImage {
+      width: 35%;
+    }
+
+    .articleSecondary {
+      width: 65%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 1rem;
+    }
+
+    /**section header**/
+    .sectionHeader {
+      text-align: center;
+    }
 
   /**color**/
   .gray {
@@ -112,16 +144,20 @@ header {
   display: flex;
 }
 
-#bannerSection .secondary {
+#centerFlexColumn {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-#bannerSection .secondary h1,
-#bannerSection .secondary h2 {
+#bannerSection #centerFlexColumn h1,
+#bannerSection #centerFlexColumn h2 {
   margin: 1rem 0;
-  max-width: 70%;
+  max-width: 75%;
 }
 
-#bannerSection .secondary h3 {
+#bannerSection #centerFlexColumn h3 {
   margin: 1rem 0;
   padding: 0.5rem 0;
   background-color: #4D4D4D;
@@ -129,7 +165,7 @@ header {
   max-width: 70%;
 }
 
-#bannerSection .secondary h3 a {
+#bannerSection #centerFlexColumn h3 a {
   color: white;
   text-decoration: none;
   text-align: center;
@@ -138,8 +174,73 @@ header {
 /**about**/
 #aboutSection {
   display: flex;
+  justify-content: space-around;
+}
+
+#aboutSection .primary img {
+  margin-bottom: 2rem;
 }
 
 #aboutSection p {
   margin: 1.5rem 0;
+}
+
+#aboutSection .articleSecondary p {
+  margin: 0.5rem 0;
+}
+
+/**learning**/
+#learningSection {
+  padding: 2rem 3.5rem 1rem 3.5rem;
+}
+
+#learningSection .sectionHeader {
+  padding-bottom: 1rem;
+}
+
+#learningBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.learning {
+  width: 30%;
+  margin: 1rem 1rem;
+  background-color: white;
+}
+
+.learningText {
+  margin: 1rem 1rem 1.5rem 1rem;
+}
+
+.learningText p:first-of-type {
+  margin: 0.5rem 0;
+}
+
+/**thesis**/
+#thesisSection {
+  padding: 2rem 1.5rem;
+}
+
+#thesisSection .sectionHeader {
+  padding-bottom: 2rem;
+}
+
+#thesisBox {
+  display: flex;
+  justify-content: center;
+}
+
+#thesisBox .primary,
+#thesisBox .secondary {
+  padding-top: 0;
+}
+
+#thesisBox .primary h4 {
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+#thesisBox p {
+  margin-top: 0.5rem;
 }
