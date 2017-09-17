@@ -3,11 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Learn at Colmar Academy</title>
-    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700"
-      rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans"
-      rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Hind:500,600"
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:400,600|Hind:500,600"
       rel="stylesheet">
     <link href="./resources/css/reset.css" type="text/css" rel="stylesheet">
     <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
@@ -30,15 +26,15 @@
         <nav>
           <ul>
             <span><a href="#onCampus">On Campus</a></span>
-            <span><a href="#online">Online</a></span>
+            <span><a href="#start">Online</a></span>
             <span><a href="#forCompanies">For Companies</a></span>
-            <span><a href="#signIn">Sign In</a></span>
+            <span><a href="#">Sign In</a></span>
           </ul>
         </nav>
       </header>
 
       <!--banner-->
-      <div id="bannerSection" class="gray">
+      <div id="bannerSection" class="gray offset">
         <div class="primary">
           <div class="primaryImage">
             <img src="./resources/images/banner.jpg">
@@ -53,9 +49,9 @@
       </div>
 
       <!--about section-->
-      <div id="aboutSection">
+      <div id="aboutSection" id="onCampus"class="offset">
         <div class="primary">
-          <div class="primaryImage">
+          <div id="onCampus" class="primaryImage anchor">
             <img src="./resources/images/information-main.jpg">
           </div>
 
@@ -108,8 +104,8 @@
       </div>
 
       <!--learning-->
-      <div id="learningSection" class="gray">
-        <div class="sectionHeader">
+      <div id="learningSection" class="gray offset">
+        <div id="start" class="sectionHeader anchor">
           <h5>Start learning</h5>
         </div>
 
@@ -196,8 +192,8 @@
       </div>
 
       <!--thesis-->
-      <div id="thesisSection">
-        <div class="sectionHeader">
+      <div id="thesisSection" class="offset">
+        <div id="forCompanies" class="sectionHeader anchor">
           <h5>Thesis exhibit</h5>
         </div>
 
@@ -242,17 +238,18 @@
             </div>
           </div>
         </div>
+      </div>
 
       <!--footer-->
-      <footer>
+      <footer class="offset">
         <div id="left">
           <h6>&copy;2016 Colmar Academy. All rights reserved.</h6>
         </div>
 
         <nav>
           <ul>
-            <span>Terms</span>
-            <span>Privacy</span>
+            <span><a href="#">Terms</a></span>
+            <span><a href="#">Privacy</a></span>
           </ul>
         </nav>
       </footer>

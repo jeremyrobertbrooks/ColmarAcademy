@@ -6,13 +6,14 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Oswald", sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: #4D4D4D;
   }
 
   h1 {
-    font-weight: bold;
-    font-size: 3rem;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #AD1D30;
   }
 
   h2 {
@@ -25,17 +26,18 @@
 
   h4 {
     font-size: 1.25rem;
-    font-weight: bold;
+    font-weight: 600;
   }
 
   h5 {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1.75rem;
+    color: #AD1D30;
   }
 
   h6 {
     font-weight: 300;
-    font-size: 0.75rem;
+    font-size: 0.825rem;
   }
 
   p, a {
@@ -43,6 +45,17 @@
     font-size: 0.875rem;
     line-height: 1.2rem;
     color: #4D4D4D;
+  }
+
+  /**position**/
+  .offset {
+    position: relative;
+    top: 4rem;
+  }
+
+  .anchor {
+    padding-top: 4rem;
+    margin-top: -4rem;
   }
 
   /**structure**/
@@ -80,10 +93,6 @@
       padding: 1rem;
     }
 
-    .articleCaption:nth-child(2n+1) {
-      background-color: #D6D6D6;
-    }
-
     .secondaryImage {
       width: 35%;
     }
@@ -103,7 +112,11 @@
 
   /**color**/
   .gray {
-    background-color: #D6D6D6;
+    background-color: #FCF7F7;
+  }
+
+  .articleCaption:nth-child(2n+1) {
+    background-color: #FCF7F7;
   }
 
 /**header**/
@@ -112,7 +125,11 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 4rem;
-  margin: 0 1.5rem;
+  background-color: #AD1D30;
+  max-width: 1366px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
 }
 
   /**logo**/
@@ -120,28 +137,36 @@ header {
     display: flex;
     align-items: center;
     height: 2rem;
+    margin-left: 1.5rem;
   }
 
   #logo span {
     font-family: "Hind", sans-serif;
     font-size: 1.25rem;
     font-weight: 600;
+    color: white;
   }
 
   #logo span:nth-child(2n+1) {
-    color: #888888;
+    color: #B3B3B3;
     font-weight: 500;
   }
 
   /**navigation**/
-  nav a {
+nav {
+  margin-right: 1.5rem;
+}
+
+  header nav a {
     text-decoration: none;
     margin-left: 1rem;
+    color: white;
   }
 
 /**banner**/
 #bannerSection {
   display: flex;
+  border-bottom: 1px solid #AD1D30;
 }
 
 #centerFlexColumn {
@@ -175,6 +200,7 @@ header {
 #aboutSection {
   display: flex;
   justify-content: space-around;
+  border-bottom: 1px solid #AD1D30;
 }
 
 #aboutSection .primary img {
@@ -192,6 +218,7 @@ header {
 /**learning**/
 #learningSection {
   padding: 2rem 3.5rem 1rem 3.5rem;
+  border-bottom: 1px solid #AD1D30;
 }
 
 #learningSection .sectionHeader {
@@ -221,6 +248,7 @@ header {
 /**thesis**/
 #thesisSection {
   padding: 2rem 1.5rem;
+  border-bottom: 1px solid #AD1D30;
 }
 
 #thesisSection .sectionHeader {
@@ -243,4 +271,19 @@ header {
 
 #thesisBox p {
   margin-top: 0.5rem;
+}
+
+/**footer**/
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background-color: #FCF7F7;
+}
+
+footer a {
+  font-size: 0.825rem;
+  text-decoration: none;
+  margin-left: 1rem;
 }
