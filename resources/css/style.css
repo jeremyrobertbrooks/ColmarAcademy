@@ -123,6 +123,43 @@
     background-color: #FCF7F7;
   }
 
+  /**mobile**/
+  .onMobileBlock {
+    display: none;
+  }
+
+  .onMobileInline {
+    display: none;
+  }
+
+  @media only screen and (max-width: 720px) {
+    h3 a {
+      font-size: 1.25rem;
+    }
+
+    .onMobileBlock {
+      display: block;
+    }
+
+    .onMobileInline {
+      display: inline;
+    }
+
+    .offMobile {
+      display: none;
+    }
+
+    .primary {
+      width: auto;
+      padding: 0;
+    }
+
+    .secondary {
+      width: auto;
+    }
+
+  }
+
 /**header**/
 header {
   display: flex;
@@ -136,36 +173,46 @@ header {
   z-index: 10;
 }
 
-  /**logo**/
-  #logo {
-    display: flex;
-    align-items: center;
-    height: 2rem;
-    margin-left: 1.5rem;
-  }
+#logo {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  margin-left: 1.5rem;
+}
 
-  #logo span {
-    font-family: "Hind", sans-serif;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: white;
-  }
+#logo span {
+  font-family: "Hind", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+}
 
-  #logo span:nth-child(2n+1) {
-    color: #B3B3B3;
-    font-weight: 500;
-  }
+#logo span:nth-child(2n+1) {
+  color: #B3B3B3;
+  font-weight: 500;
+}
 
-  /**navigation**/
 nav {
   margin-right: 1.5rem;
 }
 
-  header nav a {
-    text-decoration: none;
-    margin-left: 1rem;
-    color: white;
+header nav a {
+  text-decoration: none;
+  margin-left: 1rem;
+  color: white;
+}
+
+@media only screen and (max-width: 720px) {
+  header {
+    width: 100%;
   }
+
+  #logo {
+    justify-content: space-between;
+    width: 100%;
+    margin: 1.5rem;
+  }
+}
 
 /**banner**/
 #bannerSection {
@@ -198,6 +245,30 @@ nav {
   color: white;
   text-decoration: none;
   text-align: center;
+}
+
+@media only screen and (max-width: 720px) {
+  #bannerSection {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #centerFlexColumn {
+    width: auto;
+    margin: 1rem;
+  }
+
+  #bannerSection #centerFlexColumn h1,
+  #bannerSection #centerFlexColumn h2,
+  #bannerSection #centerFlexColumn h3 {
+    max-width: none;
+    margin: 1rem;
+    text-align: center;
+  }
+
+  #bannerSection #centerFlexColumn h3 {
+    margin-top: 0;
+  }
 }
 
 /**about**/
