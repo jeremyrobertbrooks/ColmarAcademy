@@ -115,6 +115,10 @@
     background-color: #FCF7F7;
   }
 
+  .red {
+    color: #AD1D30;
+  }
+
   .articleCaption:nth-child(2n+1) {
     background-color: #FCF7F7;
   }
@@ -280,6 +284,10 @@ footer {
   justify-content: space-between;
   padding: 1rem 1.5rem;
   background-color: #FCF7F7;
+}
+
+footer #socialMedia i {
+  margin: 0 0.5rem;
 }
 
 footer a {
