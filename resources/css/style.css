@@ -45,6 +45,7 @@
     font-size: 0.875rem;
     line-height: 1.2rem;
     color: #4D4D4D;
+    text-decoration: none;
   }
 
   /**position**/
@@ -133,10 +134,12 @@
   }
 
   @media only screen and (max-width: 720px) {
+    /**font**/
     h3 a {
       font-size: 1.25rem;
     }
 
+    /**structure**/
     .onMobileBlock {
       display: block;
     }
@@ -149,15 +152,39 @@
       display: none;
     }
 
-    .primary {
+    .primary,
+    .secondary,
+    .articleSecondary,
+    .secondaryImage {
       width: auto;
+    }
+
+    .primary,
+    .secondary {
       padding: 0;
     }
 
-    .secondary {
-      width: auto;
+    .articleCaption {
+      flex-direction: column;
+      padding-bottom: 3rem;
     }
 
+    .articleCaption:nth-child(3n) {
+      padding-bottom: 2rem;
+    }
+
+    .articleSecondary {
+      padding-top: 1rem;
+    }
+
+    /**color**/
+    .articleCaption:nth-child(2n+1) {
+      background-color: white;
+    }
+
+    .articleCaption:nth-child(2n) {
+      background-color: #FCF7F7;
+    }
   }
 
 /**header**/
@@ -290,6 +317,16 @@ header nav a {
   margin: 0.5rem 0;
 }
 
+#aboutSection .articleSecondary a {
+  color: #4A69CE;
+}
+
+@media only screen and (max-width: 720px) {
+  #aboutSection .articleSecondary {
+    width: auto;
+  }
+}
+
 /**learning**/
 #learningSection {
   padding: 2rem 3.5rem 1rem 3.5rem;
@@ -320,6 +357,32 @@ header nav a {
   margin: 0.5rem 0;
 }
 
+@media only screen and (max-width: 720px) {
+  #learningSection {
+    padding: 2rem 1rem 1.75rem 1rem;
+  }
+
+  #learningSection .sectionHeader {
+    padding-bottom: 1.25rem;
+  }
+
+  #learningBox {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .learning {
+    width: auto;
+    margin: 0.25rem 0;
+    text-align: center;
+  }
+
+  .learning h4 {
+    font-size: 1.375rem;
+    letter-spacing: 0.125rem;
+  }
+}
+
 /**thesis**/
 #thesisSection {
   padding: 2rem 1.5rem;
@@ -348,6 +411,16 @@ header nav a {
   margin-top: 0.5rem;
 }
 
+@media only screen and (max-width: 720px) {
+  #thesisSection {
+    padding: 2rem 0 1.5rem 0;
+  }
+
+  #thesisSection .sectionHeader {
+    padding-bottom: 1rem;
+  }
+}
+
 /**footer**/
 footer {
   display: flex;
@@ -365,4 +438,14 @@ footer a {
   font-size: 0.825rem;
   text-decoration: none;
   margin-left: 1rem;
+}
+
+@media only screen and (max-width: 720px) {
+  footer {
+    flex-direction: column-reverse;
+  }
+
+  #socialMedia {
+    margin-bottom: 1rem;
+  }
 }
